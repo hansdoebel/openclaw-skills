@@ -8,6 +8,7 @@ A collection of [OpenClaw skills](https://docs.openclaw.ai) for integrating with
 |-------|-------------|
 | [bewerbungsanschreiben](./bewerbungsanschreiben/SKILL.md) | Professionelle deutsche Bewerbungsanschreiben nach DIN 5008 als PDF via Typst |
 | [jina-ai](./jina-ai/SKILL.md) | Web reading, search, and content extraction powered by Jina AI APIs |
+| [jobsuche](./jobsuche/SKILL.md) | Search and retrieve German job listings via the Arbeitsagentur API |
 | [qdrant](./qdrant/SKILL.md) | Semantic memory with Qdrant vector database and Jina AI embeddings |
 | [random-quote](./random-quote/SKILL.md) | Random inspirational quotes |
 

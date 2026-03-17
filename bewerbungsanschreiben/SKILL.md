@@ -47,8 +47,10 @@ Erstelle professionelle deutsche Bewerbungsanschreiben im DIN-5008-Format, kompi
 
 ### 4. Regeln (strikt einhalten)
 
-- **Max. 1 Seite** – niemals länger
-- Kein "Hiermit bewerbe ich mich" – kreativer Einstieg
+- Max. 1 Seite, niemals länger
+- Kein "Hiermit bewerbe ich mich", kreativer Einstieg
+- Nur vollständige Sätze im Fließtext, keine Gedankenstriche oder Stichpunkte im Prosa
+- Schriftart: Helvetica, Arial oder Liberation Sans
 - Aktive Sprache, konkrete Beispiele, Bezug zu Anforderungen
 - Jedes Anschreiben individuell auf die Stelle zugeschnitten
 - Selbstbewusst, aber authentisch
@@ -61,9 +63,14 @@ mkdir -p /tmp/typst-bin
 curl -fsSL https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz \
   | tar xJ --strip-components=1 -C /tmp/typst-bin/
 
-# Kompilieren (--root zeigt auf bewerbungen/)
+# Liberation Sans installieren (metrisch identisch mit Arial/Helvetica)
+mkdir -p ~/.fonts
+curl -fsSL "https://github.com/liberationfonts/liberation-fonts/files/7261482/liberation-fonts-ttf-2.1.5.tar.gz" \
+  | tar xz -C /tmp && cp /tmp/liberation-fonts-ttf-2.1.5/LiberationSans-*.ttf ~/.fonts/
+
+# Kompilieren (--root zeigt auf bewerbungen/, --font-path für Liberation Sans)
 cd bewerbungen/
-/tmp/typst-bin/typst compile --root . firmen/<ordner>/anschreiben.typ firmen/<ordner>/anschreiben.pdf
+/tmp/typst-bin/typst compile --root . --font-path ~/.fonts firmen/<ordner>/anschreiben.typ firmen/<ordner>/anschreiben.pdf
 ```
 
 ### 6. Ergebnis liefern

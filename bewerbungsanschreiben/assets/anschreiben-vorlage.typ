@@ -37,7 +37,7 @@
     paper: "a4",
     margin: (top: 27mm, bottom: 25mm, left: 25mm, right: 20mm),
   )
-  set text(font: "New Computer Modern", size: 11pt, lang: "de")
+  set text(font: ("Helvetica", "Arial", "Liberation Sans"), size: 11pt, lang: "de")
   set par(justify: true, leading: 0.65em)
 
   // Warnung bei >1 Seite (Anschreiben muss immer auf eine Seite passen)
